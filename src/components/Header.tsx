@@ -1,5 +1,4 @@
-import React from 'react';
-import { Menu } from 'lucide-react';
+import { Menu } from "lucide-react";
 
 interface HeaderProps {
   onViewMenu?: () => void;
@@ -19,16 +18,28 @@ export function Header({ onViewMenu }: HeaderProps) {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
-          <a href="#home" className="hover:text-[var(--color-accent)] transition-colors">
+          <a
+            href="#home"
+            className="hover:text-[var(--color-accent)] transition-colors"
+          >
             Home
           </a>
-          <button onClick={onViewMenu} className="hover:text-[var(--color-accent)] transition-colors">
+          <a
+            href="#menu"
+            className="hover:text-[var(--color-accent)] transition-colors"
+          >
             Menu
-          </button>
-          <a href="#about" className="hover:text-[var(--color-accent)] transition-colors">
+          </a>
+          <a
+            href="#about"
+            className="hover:text-[var(--color-accent)] transition-colors"
+          >
             About
           </a>
-          <a href="#contact" className="hover:text-[var(--color-accent)] transition-colors">
+          <a
+            href="#contact"
+            className="hover:text-[var(--color-accent)] transition-colors"
+          >
             Contact
           </a>
           <button className="px-6 py-2 border-2 border-[var(--color-accent)] text-[var(--color-accent)] hover:bg-[var(--color-accent)] hover:text-white transition-colors">
@@ -37,7 +48,7 @@ export function Header({ onViewMenu }: HeaderProps) {
         </nav>
 
         {/* Mobile Menu Button */}
-        <button className="md:hidden">
+        <button onClick={onViewMenu} className="md:hidden">
           <Menu className="w-6 h-6" />
         </button>
       </div>
